@@ -9,13 +9,13 @@ export default function App() {
       <Route exact path={ROUTES.Home}>
         <Home />
       </Route>
-      <Route exact path={ROUTES.SIGN_IN}>
+      <Route path={ROUTES.SIGN_IN}>
         <SignIn />
       </Route>
-      <Route exact path={ROUTES.SIGN_UP}>
+      <Route path={ROUTES.SIGN_UP}>
         <SignUp />
       </Route>
-      <Route exact path={ROUTES.BROWSE}>
+      <Route path={ROUTES.BROWSE}>
         <Browse />
       </Route>
     </Router>
