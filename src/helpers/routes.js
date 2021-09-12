@@ -1,7 +1,8 @@
-﻿import React, { Children } from "react";
-import { Router, Redirect, Route } from "react-router-dom";
+﻿import React from "react";
+import { Redirect, Route } from "react-router-dom";
 
-export function IsUserRedirect({ user, loggedInPath, shildren, ...rest }) {
+export function IsUserRedirect({ user, loggedInPath, Children, ...rest }) {
+  console.log(user);
   return (
     <Route
       {...rest}
@@ -25,6 +26,7 @@ export function IsUserRedirect({ user, loggedInPath, shildren, ...rest }) {
 }
 
 export function ProtectedRoute({ user, Children, ...rest }) {
+
   return (
     <Route
       {...rest}

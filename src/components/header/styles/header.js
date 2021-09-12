@@ -5,7 +5,8 @@ export const Background = styled.div`
   display: flex;
   flex-direction: column;
   background: url(${({ src }) =>
-    src ? `../images/misc/${src}.jpg` : "../images/misc/home-bg.jpg"}) top left / cover no-repeat;
+      src ? `../images/misc/${src}.jpg` : "../images/misc/home-bg.jpg"})
+    top left / cover no-repeat;
 `;
 
 export const Container = styled.div`
@@ -55,4 +56,33 @@ export const ButtonLink = styled(ReactRouterLink)`
   &:hover {
     background-color: #f40612;
   }
+`;
+
+export const Feature = styled(Container)`
+  padding: 150px;
+  flex-direction: column;
+  align-items: normal;
+  width: 50%;
+
+  @media (max-width: 110px) {
+    display: none;
+  }
+`;
+
+export const Text = styled.p`
+  color: white;
+  font-size: 20px;
+  line-height: normal;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.45);
+  margin: 0;
+`;
+
+export const FeatureCallOut = styled.p`
+  color: white;
+  font-size: 40px;
+  line-height: normal;
+  font-weight: bold;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.45);
+  margin: 0;
+  margin-bottom: 20px;
 `;
